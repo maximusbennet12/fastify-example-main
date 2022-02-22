@@ -1,0 +1,76 @@
+{
+  "name": "fastify-app-example",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "standard && tap test/**/*.test.js",
+    "start": "fastify start -l info app.js",
+    "dev": "npm run build && fastify start -w -l info -P app.js",
+    "build": "rollup -c",
+    "elasticsearch": "./scripts/elasticsearch.sh"
+  },
+  "keywords": [],
+  "author": "Tomas Della Vedova",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/delvedor/fastify-example.git"
+  },
+  "bugs": {
+    "url": "https://github.com/delvedor/fastify-example/issues"
+  },
+  "homepage": "https://github.com/delvedor/fastify-example#readme",
+  "dependencies": {
+    "@elastic/elasticsearch": "^7.10.0",
+    "desm": "^1.1.0",
+    "fastify": "^3.11.0",
+    "fastify-autoload": "^3.4.2",
+    "fastify-cli": "^2.7.0",
+    "fastify-cookie": "^5.1.0",
+    "fastify-cors": "^5.2.0",
+    "fastify-csrf": "^3.0.1",
+    "fastify-env": "^2.1.0",
+    "fastify-helmet": "^5.2.0",
+    "fastify-oauth2": "^4.2.1",
+    "fastify-piscina": "^3.0.0",
+    "fastify-plugin": "^3.0.0",
+    "fastify-rate-limit": "^5.0.1",
+    "fastify-sensible": "^3.1.0",
+    "fastify-static": "^3.4.0",
+    "fastify-swagger": "^4.1.1",
+    "fluent-json-schema": "^2.0.3",
+    "readable-stream": "^3.6.0",
+    "svelte": "^3.32.1",
+    "under-pressure": "^5.6.0",
+    "undici": "^3.3.0"
+  },
+  "devDependencies": {
+    "@beyonk/svelte-notifications": "^3.1.0",
+    "@elastic/elasticsearch-mock": "^0.3.0",
+    "@rollup/plugin-commonjs": "^17.1.0",
+    "@rollup/plugin-node-resolve": "^11.1.1",
+    "crypto-random-string": "^3.3.0",
+    "rollup": "^2.38.4",
+    "rollup-plugin-css-only": "^3.1.0",
+    "rollup-plugin-livereload": "^2.0.0",
+    "rollup-plugin-svelte": "^7.1.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "standard": "^16.0.3",
+    "svelte-spa-router": "^3.1.0",
+    "tap": "^14.11.0"
+  },
+  "tap": {
+    "esm": false,
+    "ts": false,
+    "jsx": false,
+    "flow": false,
+    "coverage": false,
+    "jobs-auto": true
+  }
+}
